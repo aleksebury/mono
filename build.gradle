@@ -31,6 +31,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'com.google.appengine:appengine-api-1.0-sdk:+'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.10'
+	implementation group: 'com.google.guava', name: 'guava', version: '11.0.2'
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

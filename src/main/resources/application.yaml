@@ -1,1 +1,5 @@
+monobank:
+  endpoint: https://api.monobank.ua
 
+cache:
+  expireTime: 300000

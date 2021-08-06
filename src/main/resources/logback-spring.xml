@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="LOCAL" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%date{"HH:mm:ss.SSS"} %thread %level %logger{10}@%method:%line - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="LOCAL"/>
+    </root>
+
+</configuration>
