@@ -1,6 +1,6 @@
 package com.abury.mono.rest;
 
-import com.abury.mono.model.CurrencyInfo;
+import com.abury.mono.model.CurrencyInfoDto;
 import com.abury.mono.service.PublicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class PublicController {
     private PublicService publicService;
 
     @GetMapping("/currency")
-    public CurrencyInfo[] getRate() {
+    public CurrencyInfoDto[] getRate() {
         return publicService.getRate();
     }
 }

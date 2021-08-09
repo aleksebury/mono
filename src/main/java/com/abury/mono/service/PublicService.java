@@ -1,6 +1,6 @@
 package com.abury.mono.service;
 
-import com.abury.mono.model.CurrencyInfo;
+import com.abury.mono.model.CurrencyInfoDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,8 +19,8 @@ public class PublicService {
     private RestTemplate restTemplate;
 
     @Cacheable("rate")
-    public CurrencyInfo[] getRate() {
+    public CurrencyInfoDto[] getRate() {
         log.info("Caching bank rates...");
-        return restTemplate.getForObject(monobankApi.concat("/bank/currency"), CurrencyInfo[].class);
+        return restTemplate.getForObject(monobankApi.concat("/bank/currency"), CurrencyInfoDto[].class);
     }
 }

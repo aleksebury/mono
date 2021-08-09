@@ -9,7 +9,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class CurrencyInfo {
+public class CurrencyInfoDto {
     private int currencyCodeA;
     private int currencyCodeB;
     private long date;

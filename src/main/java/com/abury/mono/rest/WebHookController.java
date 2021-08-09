@@ -1,6 +1,6 @@
 package com.abury.mono.rest;
 
-import com.abury.mono.model.Payload;
+import com.abury.mono.model.MonoPayloadDto;
 import com.abury.mono.service.PersonalService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,9 @@ public class WebHookController {
     public PersonalService personalService;
 
     @PostMapping("/")
-    public HttpStatus callback(@RequestBody Payload payload) {
-        log.info("Webhook received push event: {}", payload);
-        personalService.save(payload.getData());
+    public HttpStatus callback(@RequestBody MonoPayloadDto monoPayloadDto) {
+        log.info("Webhook received push event: {}", monoPayloadDto);
+        personalService.save(monoPayloadDto.getData());
         return HttpStatus.OK;
     }
 }

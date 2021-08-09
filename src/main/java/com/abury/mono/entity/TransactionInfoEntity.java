@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 @Getter
 @Setter
 @ToString
-public class TransactionInfo {
+public class TransactionInfoEntity {
     @Id
     private Long id;
     private String account;
